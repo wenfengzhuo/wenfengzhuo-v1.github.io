@@ -1,4 +1,4 @@
-# LiXizhi's Personal Website
+# Wenfeng Zhuo's Blog 
 
-Runing on Github + Jekyll theme by [Gaohaoyang](https://github.com/Gaohaoyang/gaohaoyang.github.io)**
+Built on Jekyll theme by [Gaohaoyang](https://github.com/Gaohaoyang/gaohaoyang.github.io)**
 
