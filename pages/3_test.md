@@ -2,7 +2,7 @@
 layout: page
 title: Projects
 comments: true
-permalink: /test/
+permalink: /test
 ---
 
 * content
