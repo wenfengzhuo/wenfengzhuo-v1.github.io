@@ -2,14 +2,13 @@
 layout: post
 comments: true
 categories: web development
+title: What I learned from building this blog website
 ---
-## What I learned from building this blog website
+#### Why choose Jekyll
 
-### Why choose Jekyll
+#### Github Pages vs AWS
 
-### Github Pages vs AWS
+#### AWS Network Problem
 
-### AWS Network Problem
-
-### Automatically website updating
+#### Automatically website updating
 
