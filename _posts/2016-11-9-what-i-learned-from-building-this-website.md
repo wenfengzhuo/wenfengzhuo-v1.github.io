@@ -9,6 +9,7 @@ The answer is [markdown](https://daringfireball.net/projects/markdown/). There a
 
 ### Github Pages vs AWS
 A blog must be served in a host. [Github Pages](https://pages.github.com/) provides host for repository that either is for github projects or your personal blogs. Actually, Github Pages is powered by Jekyll, so technically, any Jekyll project could work well in Github pages (see -> [how to set up a Jekyll project in Github Pages](https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/)). Unfortuantely, Github Pages does not support most of beautify [Jekyll Themes](http://jekyllthemes.org/). Such themes are contributed by thounsand of developers who did a great job at making a beautiful Jekyll pages, and most importantly, they are free to use. This is why I decided to set up [AWS](https://aws.amazon.com). There are many cloud options, so why AWS? First, it is used by countless people; Second, it is probably one of the earliest public cloud infrastrature, so it is pretty mature; Third, it provides starters with a apealling 12-month's free trial. 
+> It turns out I was wrong because we can directly upload whole theme into our git repository. What Github Pages does not support is that it does not allow you to define a theme in _config.xml file.
 
 ### AWS Network Problem
 When everything was setup([how?](https://jekyllrb.com/docs/installation/)), I began to navigate the public adress to see whether my blog is ready. Unfortunately, the address cannot be accessed as the Chrome indicated. 
