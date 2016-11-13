@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: Wenfeng(Levi) Zhuo
 comments: true
 permalink: /about/
 ---
