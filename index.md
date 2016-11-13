@@ -4,5 +4,6 @@ layout: frontpage
 
 ## Welcome to my website
 
-This is the place where I share my ideas on topics like [Paracraft](http://www.paracraft.cn) software design, artificial intelligence and education. 
-Feel free to send me emails or join our team. 
+This is the place where I share my learnings and thoughts. For more information about me: [LinkedIn](http://linkedin.com/in/wenfengzhuo){:target="_blank"}.
+
+
