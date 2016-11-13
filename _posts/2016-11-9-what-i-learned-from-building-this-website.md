@@ -19,7 +19,8 @@ Is it related to some configurations? Then I noticed that there is a Network Sec
 ### Automatically website updating
 Finally, I want to talk about website updating. Github Pages provides a easy way to display your blog content. What you need to do is committing a change to the repository and the change will be automatically applied. While my blog is served in AWS, so how to automatically update the web content when I want to commit a new post? 
 The first tool I thought of is [cron job](http://www.unixgeeks.org/security/newbie/unix/cron-1.html). Using a cron job to periodically fetch the latest data from github repository, and that's it. The cron job is a very powerful tool in a linux system while it is so easy to configure. Here is my configuration:
-```bash
+
+```shell
   */1 *  *  *  * <User Name> cd <Blog Path> && git pull >> /var/log/blogcronb.log 2>&1
 ```
 
