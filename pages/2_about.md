@@ -1,12 +1,15 @@
 ---
 layout: page
-title: Wenfeng(Levi) Zhuo
+title: About
 comments: true
 permalink: /about/
 ---
 
 * content
 {:toc}
+
+Wenfeng(Levi) Zhuo
+=======================
 
 ### Education
 
