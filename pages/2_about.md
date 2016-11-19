@@ -13,11 +13,11 @@ Wenfeng(Levi) Zhuo
 I am working as a Software Engineer for years and passionate about new technologies. I love coding - the coding which solves problems and makes a significant difference.
 
 > Specialties: Java, Scala, Backend Development, Distributed System, Large Scale System, Data Structures & Algorithms, Design Patterns
-
+>
 > Big Data: Hadoop, Apache Spark, Apache Kafka, Apache Zookeeper
-
+>
 > Framework: Spring, Akka, DropWizard, NodeJS, SailsJS, ExpressJS, AngularJS
-
+>
 > Tools: Git, SVN, Maven, Shell
 
 ### Experience
