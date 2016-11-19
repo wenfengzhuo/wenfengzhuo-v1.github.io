@@ -21,9 +21,9 @@ I am working as a Software Engineer for years and passionate about new technolog
 > Tools: Git, SVN, Maven, Shell
 
 ### Experience
-_Software Engineer_
-
 [Marin Software](http://www.marinsoftware.com)
+
+_Software Engineer_
 
 - Improved existing system with faster speed(eg: MSCM project) and created distributed system with high performance(eg: Pacman project)
 - Created innovative internal tools(eg: Visual Testing project) to improve the working efficiency of the whole team
@@ -31,27 +31,28 @@ _Software Engineer_
 
 ---
 
-_Software Engineer_
-
 [HP Software](https://www.hpe.com)
+
+_Software Engineer_
 
 - Led the research on some cutting-edge open source project like Logstash, ElasticSearch, Kibana
 - Tech used: Java, Chef, Logstash, ElasticSearch, Kibana, Tomcat
 
 ---
 
+[Cisco System](http://www.cisco.com)
+
 _Software Engineer Intern_
 
-[Cisco System](http://www.cisco.com)
 
 - Helped to bootstrap an existing complicated distributed system and build applications on it
 - Tech used: Java, Thrift, Finagle, Cassandra, Zookeeper, SQL, C#, ASP.NET
 
 ---
 
-_Intern_
-
 [Microsoft](http://www.microsoft.com)
+
+_Intern_
 
 - Aggregated complex business data in SQLServer using SQL
 - Tech used: SQL, C#, ASP.NET
