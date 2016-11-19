@@ -24,6 +24,7 @@ I am working as a Software Engineer for years and passionate about new technolog
 _Software Engineer_
 
 [Marin Software](http://www.marinsoftware.com)
+
 - Improved existing system with faster speed(eg: MSCM project) and created distributed system with high performance(eg: Pacman project)
 - Created innovative internal tools(eg: Visual Testing project) to improve the working efficiency of the whole team
 - Tech used: Java, Spring, Hibernate, Hadoop, Spark, Kafka, Akka, Dropwizard, AngularJS, HTML5
@@ -33,6 +34,7 @@ _Software Engineer_
 _Software Engineer_
 
 [HP Software](https://www.hpe.com)
+
 - Led the research on some cutting-edge open source project like Logstash, ElasticSearch, Kibana
 - Tech used: Java, Chef, Logstash, ElasticSearch, Kibana, Tomcat
 
@@ -41,6 +43,7 @@ _Software Engineer_
 _Software Engineer Intern_
 
 [Cisco System](http://www.cisco.com)
+
 - Helped to bootstrap an existing complicated distributed system and build applications on it
 - Tech used: Java, Thrift, Finagle, Cassandra, Zookeeper, SQL, C#, ASP.NET
 
@@ -49,6 +52,7 @@ _Software Engineer Intern_
 _Intern_
 
 [Microsoft](http://www.microsoft.com)
+
 - Aggregated complex business data in SQLServer using SQL
 - Tech used: SQL, C#, ASP.NET
 
