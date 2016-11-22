@@ -13,6 +13,7 @@ It is pretty straightfoward to traverse a tree using recursion, and also it make
 following code snipets are the recursive versions of three ways of tree traversal.
 
 Let's define the binary tree structure first:
+
 ```
 public class TreeNode {
   public int val;
@@ -22,6 +23,7 @@ public class TreeNode {
 ```
 
 Preorder traversal:
+
 ```
 public void preorder(TreeNode root, List<Integer> res) {
   if (root == null) {
@@ -34,6 +36,7 @@ public void preorder(TreeNode root, List<Integer> res) {
 ```
 
 Inorder traversal:
+
 ```
 public void inorder(TreeNode root, List<Integer> res) {
   if (root == null) {
@@ -46,6 +49,7 @@ public void inorder(TreeNode root, List<Integer> res) {
 ```
 
 Postorder traversal:
+
 ```
 public void postorder(TreeNode root, List<Integer> res) {
   if (root == null) {
@@ -66,6 +70,7 @@ How about we traverse a binary tree without recursion? First why are we asking t
 unbalanced tree or even worse the tree is just like a linked list which means every node of the tree only has right child. See the
 following tree. The direct impact of this input is that we might encounter _stackoverflow_** exception during the program. This is one
 of the reason that motivates us to use other way to travese a tree.
+
 ```
 1
  \
@@ -87,6 +92,7 @@ recursion. For a recursion, actually the underline technique is using stack to s
 the task becomes clear. The task is how to use stack to iteratively traverse tree which is just like traversing a tree recursively.
 
 Let's take a look at the inorder traversal of a binary tree iteratively:
+
 ```
 public List<Integer> inorder(TreeNode root) {
   List<Integer> res = new ArrayList<>();
@@ -105,11 +111,13 @@ public List<Integer> inorder(TreeNode root) {
   return res;
 }
 ```
+
 The comments in above code compare the recursive code with the iterative code. We can clearly see that what we actually did is 
 that we maniplated the function call with our own code.
 
 With the above understanding, we can easily implement the preroder traversal and inorder traversal.
 Preorder traversal iteratively:
+
 ```
 public List<Integer> preorder(TreeNode root) {
   List<Integer> res = new ArrayList<>();
@@ -129,6 +137,7 @@ public List<Integer> preorder(TreeNode root) {
 ```
 
 Postorder traversal iteratively:
+
 ```
 public List<Integer> postorder(TreeNode root) {
   List<Integer> res = new ArrayList<>();
