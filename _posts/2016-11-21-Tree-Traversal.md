@@ -14,7 +14,7 @@ following code snipets are the recursive versions of three ways of tree traversa
 
 Let's define the binary tree structure first:
 
-```
+```java
 public class TreeNode {
   public int val;
   public TreeNode left;
@@ -24,7 +24,7 @@ public class TreeNode {
 
 Preorder traversal:
 
-```
+```java
 public void preorder(TreeNode root, List<Integer> res) {
   if (root == null) {
     return;
@@ -37,7 +37,7 @@ public void preorder(TreeNode root, List<Integer> res) {
 
 Inorder traversal:
 
-```
+```java
 public void inorder(TreeNode root, List<Integer> res) {
   if (root == null) {
     return;
@@ -50,7 +50,7 @@ public void inorder(TreeNode root, List<Integer> res) {
 
 Postorder traversal:
 
-```
+```java
 public void postorder(TreeNode root, List<Integer> res) {
   if (root == null) {
     return;
@@ -68,7 +68,7 @@ finally the right tree, and the recursive code directly reflects the definition.
 ### Traverse tree iteratively
 How about we traverse a binary tree without recursion? First why are we asking this question. Sometimes, we might be given some very
 unbalanced tree or even worse the tree is just like a linked list which means every node of the tree only has right child. See the
-following tree. The direct impact of this input is that we might encounter _stackoverflow_** exception during the program. This is one
+following tree. The direct impact of this input is that we might encounter _stackoverflow_ exception during the program. This is one
 of the reason that motivates us to use other way to travese a tree.
 
 ```
@@ -87,13 +87,13 @@ status of the traversal. We have to store some nodes in memory because they are 
 come back to visit it again. This is probably the reason things become complex.
 
 How do we implement the iterative traversal? If we consider this question as a task to convert the recursive traversal to iterative
-traversal, we will quickly know that we could use _stack_** to accomplish this. Why? Because using a stack is just mimicking the 
+traversal, we will quickly know that we could use _stack_ to accomplish this. Why? Because using a stack is just mimicking the 
 recursion. For a recursion, actually the underline technique is using stack to store the intermediate status of the function. Now 
 the task becomes clear. The task is how to use stack to iteratively traverse tree which is just like traversing a tree recursively.
 
 Let's take a look at the inorder traversal of a binary tree iteratively:
 
-```
+```java
 public List<Integer> inorder(TreeNode root) {
   List<Integer> res = new ArrayList<>();
   Stack<TreeNode> stack = new Stack<>();
@@ -112,13 +112,13 @@ public List<Integer> inorder(TreeNode root) {
 }
 ```
 
-The comments in above code compare the recursive code with the iterative code. We can clearly see that what we actually did is 
-that we maniplated the function call with our own code.
+The comments in above code compare the recursive code with the iterative code. We can clearly see that what we actually did is that we maniplated the function call with our own code.
 
 With the above understanding, we can easily implement the preroder traversal and inorder traversal.
-Preorder traversal iteratively:
 
-```
+Preorder traversal iteratively:
+java
+```java
 public List<Integer> preorder(TreeNode root) {
   List<Integer> res = new ArrayList<>();
   Stack<TreeNode> stack = new Stack<>();
@@ -138,7 +138,7 @@ public List<Integer> preorder(TreeNode root) {
 
 Postorder traversal iteratively:
 
-```
+```java
 public List<Integer> postorder(TreeNode root) {
   List<Integer> res = new ArrayList<>();
   Stack<TreeNode> stack = new Stack<>();
@@ -153,6 +153,10 @@ public List<Integer> postorder(TreeNode root) {
     } else {
       cur = stack.pop();
       res.add(cur.val);
+      while (!stack.isEmpty() && stack.peek().right == cur) {
+        cur = stack.pop();
+        res.add(cur.val);
+      }
       cur = stack.isEmpty() ? null : stack.peek().right;
     }
   }
