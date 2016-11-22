@@ -13,9 +13,9 @@ port: 80
 github_username: wenfengzhuo
 permalink: /:year/:month/:day/:title/
 # this is the url root of the view source link on the footer page.
-viewsourceroot: https://github.com/wenfengzhuo/blog/blob/master/
+viewsourceroot: https://github.com/wenfengzhuo/wenfengzhuo.github.io/blob/master/
 # this is the url root of the create page link on the footer page.
-newsourceroot: https://github.com/wenfengzhuo/blog/new/master
+newsourceroot: https://github.com/wenfengzhuo/wenfengzhuo.github.io/new/master
 
 disqus_shortname: wenfengzhuo
 disqus_url: "http://zhuowenfeng.com"
