@@ -117,7 +117,7 @@ The comments in above code compare the recursive code with the iterative code. W
 With the above understanding, we can easily implement the preroder traversal and inorder traversal.
 
 Preorder traversal iteratively:
-java
+
 ```java
 public List<Integer> preorder(TreeNode root) {
   List<Integer> res = new ArrayList<>();
