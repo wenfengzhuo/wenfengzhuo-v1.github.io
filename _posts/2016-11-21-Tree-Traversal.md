@@ -166,7 +166,9 @@ public List<Integer> postorder(TreeNode root) {
 
 ### Morris Traversal 
 We are not ending up with using stack to traverse a binary tree. Could we avoid to use stack to traverse the tree? First agian, why are we asked this question? The main reason is that the stack will consume extra memory and another reason could be there is something we didn't use in binary tree which could help us to traverse a tree without a stack. Here we could use the right child link of a leaf node to point to its inorder successor. You may be curious how people come up with this solution, so please refer to [Threaded Binary Tree](https://en.wikipedia.org/wiki/Threaded_binary_tree). 
-During the traversal, actually we could store the inorder successor of a leaf node. When we finish the traversal of a leaf node, we could use this link to navigate its successor with O(1) time. See the picture below about how to store the link: ![Binary Tree Threaded](https://upload.wikimedia.org/wikipedia/commons/8/8b/Threaded_Binary_Tree.png).
+During the traversal, actually we could store the inorder successor of a leaf node. When we finish the traversal of a leaf node, we could use this link to navigate its successor with O(1) time. See the picture below about how to store the link: 
+
+![Binary Tree Threaded](https://upload.wikimedia.org/wikipedia/commons/8/8b/Threaded_Binary_Tree.png).
 
 Here is the code of inorder morris traversal:
 
