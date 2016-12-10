@@ -5,7 +5,8 @@ categories: misc
 title: Writing List
 ---
 
-### Some interesting topics that is planned to write 
+### Some interesting topics that are planned to write 
 - Java RMI vs JMX
 - Median of data stream
 - Robust calculator
+- Gap buffer
