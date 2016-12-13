@@ -23,10 +23,9 @@ disqus_url: "http://zhuowenfeng.com"
 # Build settings
 markdown: kramdown
 
-# highlight
-# highlighter: pygments
-# highlighter: rouge
-# highlighter: false
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
 # Experimental
 incremental: true
