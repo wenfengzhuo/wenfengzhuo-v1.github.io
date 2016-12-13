@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-categories: algorithm
+categories: algorithms
 title: Gap Buffer implementation in Java
 ---
 
