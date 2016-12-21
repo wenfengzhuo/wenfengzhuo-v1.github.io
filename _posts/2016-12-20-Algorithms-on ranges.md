@@ -34,8 +34,10 @@ Let's look further. What if the input array is not a 1-dimension array, instead 
 this problem the same with what we discuss above? The problem could be stated as:
 
 > Given an 2-dimension array or matrix, A[n:m], write a function to support arbitrary query of the sum of a valid range. A valid 
-> range is defined by the left top coordinator and the right bottom coordinator in the matrix. ![matrix](http://i.imgur.com/KPWQzMZ.png)
-
+> range is defined by the left top coordinator and the right bottom coordinator in the matrix. 
+>
+>![matrix](http://i.imgur.com/KPWQzMZ.png)
+>
 > The range in the picture is defined as [(2,1), (4,3)]. The sum is the total sum of elements in the red rectangle, which is 8.
 
 ### Next discussion to cover
