@@ -16,11 +16,13 @@ to efficiently solve them with existing known data structures and algorithms.
 > for that input array.
 
 A variant of the above problem is:
+
 > What if the elements in the input array could be updated during the query. That means the array is not fixed. There is a update
 > function update(i, val) could update the value of element in the position i in the input array. In this case, how to efficiently
 > support arbitrary range queries.
 
 Apart from the sum of a range, sometimes we might concern other properties of a range
+
 > Given an input array A[0...n], write a function to support arbitrary query of the minimum value *min* of a range [i, j]. For example,
 > A = [5, 3, 1, 4, 2], range [i, j] = [1, 4], then the minimum *min* = 1.
 
@@ -30,6 +32,7 @@ a general methodology.
 
 Let's look further. What if the input array is not a 1-dimension array, instead it is a 2-dimension or even n-dimension array, is
 this problem the same with what we discuss above? The problem could be stated as:
+
 > Given an 2-dimension array or matrix, A[n:m], write a function to support arbitrary query of the sum of a valid range. A valid 
 > range is defined by the left top coordinator and the right bottom coordinator in the matrix. ![matrix](http://i.imgur.com/KPWQzMZ.png)
 
