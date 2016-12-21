@@ -11,7 +11,7 @@ handle them with efficient solutions? This article will discuss some famous prob
 to efficiently solve them with existing known data structures and algorithms.
 
 ### Typical Problems on ranges
-> Given an input array A[0...n], write a function to calculate the sum of a given range [i, j](both inclusive) in the array. For example,
+> Given an input array A[0...n], write a function to calculate the sum of a given range [i, j] (both inclusive) in the array. For example,
 > A = [0, 1, 2, 3, 4], range [i, j] = [1, 3], the sum will be s = 6. The function should support arbitrary query of any valid ranges
 > for that input array.
 
@@ -47,19 +47,19 @@ this problem the same with what we discuss above? The problem could be stated as
 4. Range mode and median
 
 ### Links to the solution to these problems
-[Range query (data structures)](https://en.wikipedia.org/wiki/Range_query_(data_structures))
+[Range query (data structures)](https://en.wikipedia.org/wiki/Range_query_(data_structures)){:target="_blank"}
 
-[Range minimum query](https://en.wikipedia.org/wiki/Range_minimum_query)
+[Range minimum query](https://en.wikipedia.org/wiki/Range_minimum_query){:target="_blank"}
 
-[Range Searching](https://www.cs.ucsb.edu/~suri/cs235/RangeSearching.pdf)
+[Range Searching](https://www.cs.ucsb.edu/~suri/cs235/RangeSearching.pdf){:target="_blank"}
 
-[Fenwick tree or binary indexed tree](https://en.wikipedia.org/wiki/Fenwick_tree)
+[Fenwick tree or binary indexed tree](https://en.wikipedia.org/wiki/Fenwick_tree){:target="_blank"}
 
-[Segment tree](https://en.wikipedia.org/wiki/Segment_tree)
+[Segment tree](https://en.wikipedia.org/wiki/Segment_tree){:target="_blank"}
 
-[RANGE MODE AND RANGE MEDIAN QUERIES ON LISTS AND TREES](http://cglab.ca/~morin/publications/ds/rmq-njc.pdf)
+[RANGE MODE AND RANGE MEDIAN QUERIES ON LISTS AND TREES](http://cglab.ca/~morin/publications/ds/rmq-njc.pdf){:target="_blank"}
 
-[B+ tree](https://en.wikipedia.org/wiki/B%2B_tree)
+[B+ tree](https://en.wikipedia.org/wiki/B%2B_tree){:target="_blank"}
 
 
 
