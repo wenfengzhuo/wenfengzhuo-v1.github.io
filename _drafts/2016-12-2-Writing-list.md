@@ -11,4 +11,5 @@ title: Writing List
 - [ ] Robust calculator
 - [x] Gap buffer
 - [ ] Range Search
+- [ ] Longest Increasing Sequence
 
