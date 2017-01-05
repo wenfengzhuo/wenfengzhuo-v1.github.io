@@ -91,6 +91,19 @@ created calculators.
 
 ![string calculators](http://i.imgur.com/w5yKQPS.gif)
 
+### How it works
+
+The underline principles for the library is pretty easy and straightforward. There is no fancy algorithms or third-party tools that are used by Anycalc. The library adopts the popular [Reverse Polish Notation](https://en.wikipedia.org/wiki/Reverse_Polish_notation){:target="_blank"}, a common methodology used in computer science, to evaluate the expressions. In the library, the workflow could be represented by the following diagram:
+
+![Anycalc workflow](http://i.imgur.com/WzcMS9p.png)
+
+To make the library extensible and robust, the library leverages on some design patterns that are widely used in software development, for example, [Factory Design Pattern](https://en.wikipedia.org/wiki/Factory_method_pattern){:target="_blank"}. I made a diagram to show the relationship of different objects in the library.
+
+![Anycalc design](http://i.imgur.com/KvXIw2q.png)
+
+(note: Double Calculator is what we daily used calculator that works on numbers)
+
+
 ### Future work
 There are still many things that should be improved in this library. The todo items for this library are:
 
