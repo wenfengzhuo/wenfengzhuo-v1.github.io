@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-categories: algorithms, design
+categories: algorithms,design
 title: Union Iterators
 ---
  
