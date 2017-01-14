@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-categories: algorithms, data structures
+categories: algorithms,data structures
 title: Depth of Linked List
 ---
    
