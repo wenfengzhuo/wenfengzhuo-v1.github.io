@@ -143,6 +143,7 @@ union(Iterator[] A)
 ```
 
 In line (1), we create a new thread (or process) to run the recursive call for the left half of the array in parallel. In line(2), we will wait the completion of the two processes. So the time complexity could be calculated with the formula:
+
 > T(M) = T(M/2) + O(M * N * K)
 
 As a result, the final time complexity will be O(N * K * M).
@@ -157,16 +158,17 @@ Let's assume the range of keys in those tuples is 0~1023, and there are 3 keys i
 
 ```
 hash(tuple)
-	h = 0
-    i = 0
-    while i < 3
-	    if tuple[i] > 512
-		    h |= 1 << (2-i)
-		i ++
-	return h
+  h = 0
+  i = 0
+  while i < 3
+    if tuple[i] > 512
+      h |= 1 << (2-i)
+    i ++
+  return h
 ```
 
 Let's assume each tuple now has a function *hashCode* which returns a pre-computed hash. If luckily, all the tuples in those iterators have different hash value, then we could directly reduce the time complexity of our algorithm to O(N*M\*log(M)). In reality, some tuples might have the same hash value. So we need to do a amortized analysis of the algorithm. If all the tuples distributed normally in the picture above, then we could calculate the how many tuples might end up with having the same hash values. For two tuples, the possibility to have the same hash value will be 1 / (2 ^ k). We know that there will N\*M comparisons in total, so for those comparisons which need full comparisons of each keys, the total number will be (1/(2^k)) * (N\*M). Let's assume there is **c** percentage of comparison which could directly use hash values. So the average time for each comparison will be
+
 > ((1/(2^k)*(N\*M)) * K + cN\*M)/(M\*N) = K/(2^K) + c
 
 As c is lower than 1 (because not all comparisons could directly use hash values), so the average time for each comparison will less than 2. The time complexity now will be from O(N*K\*M\*log(M)) to O(N\*M\*log(M) because the average time for comparison becomes constant time.
