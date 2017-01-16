@@ -14,8 +14,9 @@ title: Union Iterators
 >      The ordered union of all tuples from each iterators.
 >
 > **Assumption**:
-> 1. Tuples are different to each other in the same iterator
-> 2. Each iterator has exact the same number of tuples
+> 1 Tuples are different to each other in the same iterator
+> 
+> 2 Each iterator has exact the same number of tuples
 
 The question above could be simplified as: *merge M iterators into a single stream and keep those tuples sorted in the final stream*. As tuples in a single iterator are already in order, what we need to take care is to maintain the relative order among the different iterators during the merging process. With this objective, I have two solutions in mind.
 
@@ -37,23 +38,26 @@ union(Iterator[] A):
     if i has next
       q.offer(i)  ====> (1) O(Klog(M)) * M
   while q has next
-    i = q.poll()
+    i = q.poll()  ====> (2) O(Klog(M) * N * M
     r.add(i.next())
     if i has next
-      q.offer(i)  ====> (2) O(Klog(M)) * (N*M - M)
+      q.offer(i)  ====> (3) O(Klog(M)) * (N*M - M)
   return r
 ```
 
 **Complexity**
 
 In the code above, we could see that we first add those iterators who have elements into the priority queue. Then we will retrieve the smallest element every time we poll the root from the priority queue. After we add the smallest element in our final stream, we also need to make sure that we will add the iterator back if it still has elements in it.
-In line (1), we can see the program will execute M times if we have M iterators, for each addition into the queue, it will be O(log(M)) comparisons as of the property of priority queue. We have to notice that, for each comparison, it will cost O(K) time to compare a tuple since there are K keys in each tuple. So in total, the line (1) will contribute O(Klog(M)) \* M to the time complexity. In line (2), we know that there are still (N\*M - M) elements that are needed to be offered in the queue, so in total, it will be O(Klog(M))\*(N\*M - M). All in all, the total time complexity of this algorithm will be O(N * K * M * log(M)) in worst case. 
+
+In line (1), we can see the program will execute M times if we have M iterators, for each addition into the queue, it will be O(log(M)) comparisons as of the property of priority queue. We have to notice that, for each comparison, it will cost O(K) time to compare a tuple since there are K keys in each tuple. So in total, the line (1) will contribute O(Klog(M)) \* M to the time complexity. In line (3), we know that there are still (N\*M - M) elements that are needed to be offered in the queue, so in total, it will be O(Klog(M))\*(N\*M - M). All in all, the total time complexity of this algorithm will be O(N * K * M * log(M)) in worst case. 
+
+To be more precise, as the number of comparisons matters if K is relatively not small, we could dive deeper to see more precise number of comparisons for this algorithm. From the code above, we could know that each tuple in those iterators will be offered in the queue and polled out of the queue for once separately. As a result, there will be 2 \* N \* M operations with the queue. For either *offer* or *poll* operation, by knowing the property of heap, we know that it will end up with 2 \* log(M) comparisons because it requires two comparisons to determine which key is smaller during the repairing of the heap. In total, there will be 4 \* N \* M \* log(M) comparisons, and hence the total time complexity will be O(4 \* N \* K \* M \* log(M)).
+
 As for the space complexity, we know that during the merging process, there will always be M elements if all iterators still have remaining elements. So in worst case, it will be O(M) elements in queue, and each elements has O(K) keys, so in total, the space complexity will be O(M * K).
+
 In conclusion:
-
-====> Time Complexity: O(N * K * M * log(M))
-
-====> Space Complexity: O(M * K)
+Time Complexity: O(N * K * M * log(M))
+Space Complexity: O(M * K)
 
 ### Divide-and-Conquer
 
@@ -100,18 +104,25 @@ union(Iterator[] A)
 As we can see in the code, the time complexity follows the formula of a typical divide-and-conquer solution:
 > T(n) = 2*T(n/2) + f(n)
 
-In the line (3), we can see it calls *mergeIterator* function. The *mergeIterator* function has time complexity proportional to the size of the two iterators, because there will be the same number of comparisons with the number of elements in these two iterators. As a result, line (3) indicates that f(n) = O(N*M\*K)=O(NK * M). According to the master theorem, the final time complexity of this algorithm will be O(NKM\*log(M)).
+In the line (3), we can see it calls *mergeIterator* function. The *mergeIterator* function has time complexity proportional to the size of the two iterators, because there will be the same number of comparisons with the number of elements in these two iterators. As a result, line (3) indicates that f(n) = O(N*M\*K)=O(NK * M). According to the master theorem, the final time complexity of this algorithm will be O(N \* K \* M \* log(M)). 
+
+Let's see the number of comparisons in this algorithm. In *mergeIterator* function, the maximum number of comparison is equal to the sum of the number of elements in the two given iterators (for example, if the two iterators are [1, 3, 5], [2, 4, 5], the number of comparison will be 3 + 3 - 1). The number of comparisons follows the divide-and-conquer formula:
+
+> C(n) = 2 \* C(n/2) + f(n)
+
+The f(n) = N * M, when n = M, then the exact maximum number of comparison will be O(N \* M * log(M)), hence the total time complexity will be O(N \* K \* M \* log(M)).
+
 For space complexity, as you can see from the code, there will be no extra space needed if we do not count the stack space for recursive call. With the space for recursive call considered, the space complexity will be O(log(M)).
 
-====> Time Complexity: O(N * K / 2 * M * log (M))
-
-====> Space Complexity: O(log(M))
+In conclusion:
+Time Complexity: O(N * K * M * log (M))
+Space Complexity: O(log(M))
 
 ### Comparison between queue and divide-and-conquer
 
 **Time Complexity**
 
-From the time complexity perspective, both of the two functions will have the same time complexity, which means that theoretically, both of the two algorithms will have same running time for the same input. 
+From the time complexity perspective, both of the two functions will have the same time complexity, which means that theoretically, both of the two algorithms will have nearly same running time for the same input. While taking the constant factor into consideration, the divide-and-conquer has smaller constant factor due to the fewer comparison during the merging process. In general, the divide-and-conquer solution performs better than the queue solution.
 
 **Space Complexity**
 
@@ -143,7 +154,6 @@ union(Iterator[] A)
 ```
 
 In line (1), we create a new thread (or process) to run the recursive call for the left half of the array in parallel. In line(2), we will wait the completion of the two processes. So the time complexity could be calculated with the formula:
-
 > T(M) = T(M/2) + O(M * N * K)
 
 As a result, the final time complexity will be O(N * K * M).
@@ -161,14 +171,39 @@ hash(tuple)
   h = 0
   i = 0
   while i < 3
-    if tuple[i] > 512
-      h |= 1 << (2-i)
-    i ++
+	if tuple[i] >= 512
+	  h |= 1 << (2-i)
+	i ++
   return h
 ```
 
-Let's assume each tuple now has a function *hashCode* which returns a pre-computed hash. If luckily, all the tuples in those iterators have different hash value, then we could directly reduce the time complexity of our algorithm to O(N*M\*log(M)). In reality, some tuples might have the same hash value. So we need to do a amortized analysis of the algorithm. If all the tuples distributed normally in the picture above, then we could calculate the how many tuples might end up with having the same hash values. For two tuples, the possibility to have the same hash value will be 1 / (2 ^ k). We know that there will N\*M comparisons in total, so for those comparisons which need full comparisons of each keys, the total number will be (1/(2^k)) * (N\*M). Let's assume there is **c** percentage of comparison which could directly use hash values. So the average time for each comparison will be
-
+Let's assume each tuple now has a function *hashCode* which returns a pre-computed hash. If luckily, all the tuples in those iterators have different hash value, then we could directly reduce the time complexity of our algorithm to O(N\*M\*log(M)). In reality, some tuples might have the same hash value. So we need to do an amortized analysis of the algorithm. If all the tuples distributed normally in the picture above, then we could calculate the how many tuples might end up with having the same hash values. For two tuples, the possibility to have the same hash value will be 1 / (2 ^ k). We know that there will N\*M comparisons in total, so for those comparisons which need full comparisons of each keys, the total number will be (1/(2^k)) * (N\*M). Let's assume there is **c** percentage of comparison which could directly use hash values. So the average time for each comparison will be
 > ((1/(2^k)*(N\*M)) * K + cN\*M)/(M\*N) = K/(2^K) + c
 
-As c is lower than 1 (because not all comparisons could directly use hash values), so the average time for each comparison will less than 2. The time complexity now will be from O(N*K\*M\*log(M)) to O(N\*M\*log(M) because the average time for comparison becomes constant time.
+As c is lower than 1 (because not all comparisons could directly use hash values), so the average time for each comparison will less than 2. The time complexity now will be from O(N*K\*M\*log(M)) to O(N\*M\*log(M)） because the average time for comparison becomes constant time.
+
+**Combination**
+Theoretically, if we combine above two optimizations, we could achieve O(N * M) time 
+
+### Benchmark
+As to demonstrate the algorithms described above and its performance, I implemented them with Java. The source code could be found here:
+
+> [Union Iterators](https://github.com/wenfengzhuo/union-iterator)
+
+The following pictures show the results from the benchmark tests for those two algorithms. 
+
+![M](http://i.imgur.com/OwDe7tz.png)
+
+**Picture 1**: The running time for different number of iterations to be merged. (M changed)
+
+![N](http://i.imgur.com/hiKMXvs.png)
+
+**Picture 2**: The running time for different number of elements in each iterator. (N changed).
+
+For the **picture 1**, we could see that when number of iterators to be merged grows, divide-and-conquer solution will perform better than priority queue solution. This is what we expected from the analysis of the algorithm. Although there are some difference in running time, the two solutions differ only in a small scale, which might indicates the constant factor might not cause huge performance gap between these two solutions.
+
+For the **picture 2**,  an interesting thing to note that is the priority queue solution outperforms than the divide-and-conquer solution when number of elements in each iterator grows. This could be interpreted as the the M is small so it will not gain too much from the benefits of divide-and-conquer solutions, and the function call during the recursive process might cost some overhead, which make it slower than the priority queue solution.
+
+From the two pictures above, we could conclude that, in real-world practice, when M is usually large, we might choose divide-and-conquer solution, and when N is usually larger than M, we could choose priority queue solution.
+
+In the two pictures, we could see that there is a third line called *ParallelMerger*. It is the parallelized version of divide-and-conquer solution. Unfortunately, it does not meet our expectation. One explanation could be that there is thread-switching overhead that makes it slower than non-parallelized algorithm. Or maybe I could implement in a different way for *ParallelMerger*.
