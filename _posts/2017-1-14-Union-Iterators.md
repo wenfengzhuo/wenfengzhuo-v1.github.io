@@ -6,14 +6,19 @@ title: Union Iterators
 ---
  
 > **Input**:
->	    M iterators
->	    N tuples in each iterator
->	    K keys in each tuple
+>
+> M iterators
+>
+> N tuples in each iterator
+>
+> K keys in each tuple
 >
 > **Output**:
->      The ordered union of all tuples from each iterators.
+>
+> The ordered union of all tuples from each iterators.
 >
 > **Assumption**:
+>
 > 1 Tuples are different to each other in the same iterator
 > 
 > 2 Each iterator has exact the same number of tuples
