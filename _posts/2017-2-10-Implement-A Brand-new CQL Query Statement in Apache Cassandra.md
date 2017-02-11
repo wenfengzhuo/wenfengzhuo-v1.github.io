@@ -22,4 +22,4 @@ The solution created a new grammar in CQL and an independent statement. It uses 
 As for the shortage of this implementation, it uses built-in ReadCommand to read the data, although all the data we need is the metadata of those rows. As the max timestamp is for a partition key, we could maintain a "max timestamp" metadata item for each partition key. When inserting, updating or deleting a row under this partition key, we directly update its "max timestamp". In this way, we could retrieve the max timestamp in O(1) time. But for this solution, it requires extra efforts to make sure the max timestamp is updated correctly due to concurrency, which might cause performance issue. If this is a used heavily by users, then we could implement a more efficient solution otherwise the former solution will be preferred as above described trade-offs.
 
 ### Pull Request
-[Github PR](https://github.com/wenfengzhuo/cassandra/pull/1){_target="blank"}
+[Github PR](https://github.com/wenfengzhuo/cassandra/pull/1){:target="_blank"}
