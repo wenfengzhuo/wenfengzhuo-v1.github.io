@@ -11,6 +11,8 @@ Finding a job in US is never an easy task, especially technical jobs though ther
 my last onsite interview with Quantcast on Feb. 28 this year (2017). During this peroid, I had totally 14 technical phone interviews and I passed 11 of them (Some companies have multiple phone rounds, like Quantcast and SumoLogic).
 I got 6 onsite interviews after I passed those phone interviews, and finally I received 4 offers from these companies: SumoLogic, Amazon, Uber and Quantcast.
 
+<hr>
+
 Then I realized that signing an offer was even more complicated and strugling. To me, these four companies are great and very attractive. 
 
 **SumoLogic**
@@ -38,5 +40,38 @@ in this industry, but also is one of the few companies who have gained net profi
 by most of Top 100 websites worldwide, and millions of websites are using the product. This generous product gives them back a huge amount of data that helps Quantcast has precise understanding of users. This understanding further enables Quantcast to perform a lot better than 
 other competitors in prospecting and retargeting. 
 
-Continuing...
+<hr>
+
+It took me half of month to make a decision, so util March 15th I finally decided where to go. This is my first job in US and it would probably change my life. It was very easy to choose an offer emotionally, but I would like to make a best choice that both follows my heart and as the same satisfies the following criteria.
+
+**Company Vision**
+
+This is the first priority among those criteria. As an engineer, my motivation is always trying to do something that will make a difference to the world. 
+
+Uber is a company with huge potential to be more successful. Transportation is super large in our modern life, and every car on the road could connect with each other to form a enormous network. In this network, Uber could deliver more things rather than rides and eats. Uber already has their platform that supports thousands of millions requests, and more innovations will happen on their platform. I personally believe that Uber will be super large in the future. 
+
+Quantcast is also full of potential. Given a fierce competition in ad-tech industry, Quantcast still gains net profit and runs towards the right direction. With the existing ability to make profit and the right leadership, Quantcast will be much more ambitious in the future. Google and Facebook are certainly the largest competitors, but they are more fousing on their own platform: Search and Social. Quantcast could engage in more areas and places. 
+
+SumoLogic is certainly growing. More and more customers are switching to the cloud-based platform. I believe that the company will grow larger and larger. But personally, I don't see that SumoLogic will be a huge company. They have a very tough competitor - Splunk, and of course a lot of other platforms including open source communities. The need for SumoLogic platform seems not that urgent, which I personally believe that there will be a ceiling for their market. They do make a great impact in log management and machine data analysis, but I don't think it will make a huge difference.
+
+**Culture**
+
+Culture is very important to me. I love the culture that favors ownship, responsibility, flexibility, creativity. A great culture will boost employee's performance and help them to deliver great products and features. A great culture also facilitates the good relationships among colleagues, which further improve the efficiency. I alwasy want to join the company that makes me happy to come to office and love Monday.
+
+All the four companies have great engineering culture, although only one company that has the culture that concerns me. Despite some bad news reported in Feburary, they actually did not affect me too much about the culture in Uber. There were two things that made me a little bit worried if I would join Uber. During the interview process, I found that people in Uber did not like to reply emails (I don't know this only happens to myself or also to others). When I sent an email to ask for travel accomodations for onsite interview, it took nearly a week to get the reply before the day of my flight. Sometimes a email was sent, it never was replied. This applied to my recruiter, my hiring manager and my coordinator. (I have to say my recruiter and my hiring manager are very nice guys. But I just don't know why they don't like to reply emails). Another thing is their inflexibility. I had 3.5 years working experience and companies like Quantcast, Amazon, SumoLogic treated me just as non-graduate candidate and offered me higher level positions and better compensations than new graduate candidates. Even though I tried all my best to prove that I am not a typical new graduate candiate (my recruiter and my hiring manager were also helping to persuade the committee to give me a more competing offer), unfortunatelly the committee still regarded me as a entry level candidate and refused to provide me a higher level of position.
+
+**Personal Growth**
+
+Instead of the company growth, personal growth is also very important. Although the company is great and have a bright future, it is meanless if I join a team in a company where I have few opportunities to grow.
+
+Quantcast values me and respected me as a rather senior individual that could contribute more in their team. They offered better compensation and also they assigned more responsibilities to me. Here is the quote from my hiring manager:
+
+>As for your role on the team, I see you as a rather senior individual.  I’d expect you to be taking on projects with a level of ambiguity where you’d be doing full component design.  In other words, you’d be a leader and soon enough a mentor in looking at abstract software problems and coming up with compelling designs that you’d socialize with the team.  I’d expect you to be advising senior members of the team and raising the bar on good code practice. 
+
+I believe that there will be more opportunities for me to grow if I join a company that respects and values me. In this sense, I do appreciate that Quantcast could provide me such a great chance to prove myself and exert my influence. I believe that my career goal will have higher possibility to be achieved in Quantcast.
+
+This is why I choose Quantcast.
+
+
+
 
