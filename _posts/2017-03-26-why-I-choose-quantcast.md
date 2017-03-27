@@ -42,7 +42,7 @@ other competitors in prospecting and retargeting.
 
 <hr>
 
-It took me half of month to make a decision, so util March 15th I finally decided where to go. This is my first job in US and it would probably change my life. It was very easy to choose an offer emotionally, but I would like to make a best choice that both follows my heart and as the same satisfies the following criteria.
+It took me half of month to make a decision, so util March 15th I finally decided where to go. This is my first job in US and it would probably change my life. It was very easy to choose an offer emotionally, but I would like to make a best choice that both follows my heart and at the same time satisfies the following criteria.
 
 **Company Vision**
 
